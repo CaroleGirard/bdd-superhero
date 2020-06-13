@@ -20,7 +20,8 @@ router.post('/inscription', async function (req, res, next) {
     age: req.body.age 
    });
    var user = await newUser.save();
-  res.render('inscription', {title: 'Save Heroes', lastName:req.body.lastName, firstName:req.body.firstName, age:req.body.age, action:"save", user: await newUser.save() })
+   var users = await UserModel.find();
+  res.render('inscription', {title: 'Save Heroes', lastName:req.body.lastName, firstName:req.body.firstName, age:req.body.age, action:"save", user: await newUser.save(), users: await UserModel.find() })
 })
 
 module.exports = router;

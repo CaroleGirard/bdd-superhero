@@ -5,3 +5,8 @@ body {
   background-image: url('/images/istockphoto-1050206744-1024x1024.jpg');
   color: whitesmoke;
 }
+h2 {
+  font-size: 14px;
+  font-family: 'Nunito', sans-serif;
+  color: aqua;
+}

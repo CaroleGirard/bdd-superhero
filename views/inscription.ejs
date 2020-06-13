@@ -4,6 +4,7 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Permanent+Marker&display=swap" rel="stylesheet">
   </head>
   <body>
     <h1><%= title %></h1>
@@ -15,5 +16,12 @@
         <button>Appuyez sur le bouton et sauvez un Héro !</button>
       </form>
     </div>
+    <h1>Liste des Héros sauvegardés</h1>
+    <% for (var i=0; i<users.length; i++) {
+    %>
+        <h2><%= users[i].firstName %> <%= users[i].lastName %></h2>
+    <%
+    }
+    %>
   </body>
 </html>
