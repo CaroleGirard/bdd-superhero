@@ -7,21 +7,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Permanent+Marker&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1><%= title %></h1>
-    <div id= "main">
-      <form action="/inscription" method="post">
-        <div><input type="text" name="lastName" placholder="Nom" value=""></div>
-        <div><input type="text" name="firstName" placholder="Prénom" value=""></div>
-        <div><input type="text" name="age" placholder="Age" value=""></div>        
-        <button>Appuyez sur le bouton et sauvez un Héro !</button>
-      </form>
-    </div>
-    <h1>Liste des Héros sauvegardés</h1>
-    <% for (var i=0; i<users.length; i++) {
-    %>
-        <h2><%= users[i].firstName %> <%= users[i].lastName %></h2>
-    <%
-    }
-    %>
+
+        <h1><%= title %></h1>
+        <div>
+        <form action="/inscription" method="post">
+            <div><input type="text" name="lastName" placholder="Nom" value=""></div>
+            <div><input type="text" name="firstName" placholder="Prénom" value=""></div>
+            <div><input type="text" name="age" placholder="Age" value=""></div>        
+            <button>Appuyez sur le bouton et sauvez un Héro !</button>
+        </form>
+        </div>
+        <h1>Liste des Héros sauvegardés</h1>
+        <% for (var i=0; i<users.length; i++) {
+        %>
+            <h2><%= users[i].firstName %> <%= users[i].lastName %></h2>
+        <%
+        }
+        %>
   </body>
 </html>

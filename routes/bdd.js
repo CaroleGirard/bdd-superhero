@@ -12,9 +12,19 @@ var options = {
     }
    );
    var userSchema= mongoose.Schema({
-       firstName: String,
-       lastName: String,
-       age: Number
+       firstName: {
+        type: String,
+        required: true
+       },
+       lastName: {
+        type: String,
+        required: true
+       },
+       age: {
+        type: Number,
+        required: true
+       }
+       
     });
     var UserModel= mongoose.model('users',userSchema);
 

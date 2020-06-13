@@ -10,7 +10,7 @@ router.get('/', async function(req, res, next) {
 });
 
 router.get('/inscription', function (req, res, next) {
-  res.render('inscription', {title: 'Save Heroes', lastName:"", firstName:"", age:"", action:"load" })
+  res.render('inscription', {title: 'Save Heroes', action:"load", users })
 })
 
 router.post('/inscription', async function (req, res, next) {
@@ -21,7 +21,7 @@ router.post('/inscription', async function (req, res, next) {
    });
    var user = await newUser.save();
    var users = await UserModel.find();
-  res.render('inscription', {title: 'Save Heroes', lastName:req.body.lastName, firstName:req.body.firstName, age:req.body.age, action:"save", user: await newUser.save(), users: await UserModel.find() })
+  res.render('inscription', {title: 'Save Heroes', lastName:req.body.lastName, firstName:req.body.firstName, age:req.body.age, action:"save", user: await newUser.save(), users })
 })
 
 module.exports = router;
